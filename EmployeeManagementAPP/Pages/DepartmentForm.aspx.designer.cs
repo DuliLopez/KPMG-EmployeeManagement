@@ -51,6 +51,15 @@ namespace EmployeeManagementAPP.Pages
         protected global::System.Web.UI.WebControls.TextBox txtDepId;
 
         /// <summary>
+        /// rfvDepId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDepId;
+
+        /// <summary>
         /// txtDepName control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace EmployeeManagementAPP.Pages
         protected global::System.Web.UI.WebControls.TextBox txtDepName;
 
         /// <summary>
+        /// rfvDepName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDepName;
+
+        /// <summary>
         /// txtLocation control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace EmployeeManagementAPP.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLocation;
+
+        /// <summary>
+        /// rfvLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLocation;
 
         /// <summary>
         /// btnAdd control.

@@ -51,6 +51,15 @@ namespace EmployeeManagementAPP.Pages
         protected global::System.Web.UI.WebControls.TextBox txtEmpId;
 
         /// <summary>
+        /// rfvEmpId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmpId;
+
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace EmployeeManagementAPP.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName;
+
+        /// <summary>
+        /// rfvEmpName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmpName;
 
         /// <summary>
         /// txtAddress control.
@@ -69,6 +87,15 @@ namespace EmployeeManagementAPP.Pages
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
 
         /// <summary>
+        /// rfvEmpAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmpAddress;
+
+        /// <summary>
         /// ddlDepId control.
         /// </summary>
         /// <remarks>
@@ -76,6 +103,15 @@ namespace EmployeeManagementAPP.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDepId;
+
+        /// <summary>
+        /// rfvDepId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDepId;
 
         /// <summary>
         /// txtSalary control.
@@ -94,6 +130,15 @@ namespace EmployeeManagementAPP.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regexSalaryValidator;
+
+        /// <summary>
+        /// rfvEmpSalary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmpSalary;
 
         /// <summary>
         /// btnAdd control.

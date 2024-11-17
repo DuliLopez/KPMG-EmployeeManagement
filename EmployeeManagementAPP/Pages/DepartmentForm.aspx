@@ -5,11 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
             background-color: #f8f9fa;
         }
+
         .sidebar {
             background-color: #343a40;
             color: white;
@@ -18,10 +19,12 @@
             position: fixed;
             width: 250px;
         }
+
         .sidebar h2 {
             text-align: center;
             margin-bottom: 30px;
         }
+
         .sidebar .link-button {
             display: block;
             width: 100%;
@@ -35,21 +38,25 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
         .sidebar .link-button:hover {
             background-color: #0056b3;
             color: #fff;
             text-decoration: none;
         }
+
         .content {
             margin-left: 220px;
             padding: 40px;
         }
+
         h1 {
             font-size: 28px;
             color: #343a40;
             text-align: center;
             margin-bottom: 20px;
         }
+
         .auto-style1 {
             width: 844px;
         }
@@ -77,7 +84,7 @@
             <asp:LinkButton ID="LinkButton1" runat="server" CssClass="link-button" OnClick="LinkButtonEmployeeForm_Click1">Employee Form</asp:LinkButton>
             <asp:LinkButton ID="LinkButton2" runat="server" CssClass="link-button" OnClick="LinkButtonDepartmentForm_Click">Department Form</asp:LinkButton>
         </div>
-       <div class="content">
+        <div class="content">
             <center>
         <div style="border-style: solid; border-color: inherit; border-width: medium; background-color: #E6EEF3; border-radius: 5px" class="auto-style1">
             <b>
@@ -88,16 +95,40 @@
                 <div class="auto-style4">
                     Department ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-:
                     <asp:TextBox ID="txtDepId" placeholder="Enter Department ID" runat="server" TextMode="Number" Style="font-size: 20px; width: 417px" CssClass="auto-style3"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator 
+                        ID="rfvDepId" 
+                        runat="server" 
+                        ControlToValidate="txtDepId" 
+                        ErrorMessage="Please enter Department ID." 
+                        ForeColor="Red" 
+                        Display="Dynamic"
+                        ValidationGroup="DepartmentForm" />
                     <br />
                     Department Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-:
                     <asp:TextBox ID="txtDepName" placeholder="Enter the Department Name" runat="server" Style="font-size: 20px; width: 417px" CssClass="auto-style2"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator 
+                        ID="rfvDepName" 
+                        runat="server" 
+                        ControlToValidate="txtDepName" 
+                        ErrorMessage="Please enter Department Name." 
+                        ForeColor="Red" 
+                        Display="Dynamic"
+                        ValidationGroup="DepartmentForm" />
                     <br />
                     Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-:
                     <asp:TextBox ID="txtLocation" placeholder="Enter the Location" runat="server" Style="font-size: 20px; width: 417px"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator 
+                        ID="rfvLocation" 
+                        runat="server" 
+                        ControlToValidate="txtLocation" 
+                        ErrorMessage="Please enter Location." 
+                        ForeColor="Red" 
+                        Display="Dynamic"
+                        ValidationGroup="DepartmentForm" />
                     <br />
 
-                    <asp:Button Text="ADD" Style="margin-left: 50px; font-size: 15px; height: 35px; width: 100px; border-radius: 5px; background-color: black; color: white" runat="server" OnClick="btnAdd_Click" ID="btnAdd" />
-                    <asp:Button Text="UPDATE" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnUpdate" OnClick="btnUpdate_Click" />
+                    <asp:Button Text="ADD" ValidationGroup="DepartmentForm" Style="margin-left: 50px; font-size: 15px; height: 35px; width: 100px; border-radius: 5px; background-color: black; color: white" runat="server" OnClick="btnAdd_Click" ID="btnAdd" />
+                    <asp:Button Text="UPDATE" ValidationGroup="DepartmentForm" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnUpdate" OnClick="btnUpdate_Click" />
                     <asp:Button Text="DELETE" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnDelete" OnClick="btnDelete_Click" />
                     <asp:Button Text="CLEAR" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnCLear" OnClick="btnClear_Click" /><br />
                     <br />
@@ -134,7 +165,7 @@
 
                     <asp:TemplateField HeaderText="Action" HeaderStyle-BackColor="#AAB3BA" HeaderStyle-Font-Bold="true">
                         <ItemTemplate>
-                            <asp:Button ID="btnSelectedRow" runat="server" CommandName="SelectRecord" CommandArgument="<%# Container.DisplayIndex %>" CssClass="btn btn-success" Text="View" Style="margin-left: 10px" />
+                            <asp:Button ID="btnSelectedRow" runat="server" CommandName="SelectRecord" CommandArgument="<%# Container.DisplayIndex %>" CssClass="btn btn-success" Text="View" ValidationGroup="None" Style="margin-left: 10px" />
                         </ItemTemplate>
                         <HeaderStyle HorizontalAlign="Center" Width="100px" Font-Bold="true" />
                     </asp:TemplateField>
@@ -142,7 +173,7 @@
             </asp:GridView>
         </div>
             </center>
-        <asp:LinkButton ID="LinkButtonDashboard" runat="server" OnClick="LinkButtonDashboard_Click">Back to DashBoard</asp:LinkButton><br />
+            <asp:LinkButton ID="LinkButtonDashboard" runat="server" OnClick="LinkButtonDashboard_Click">Back to DashBoard</asp:LinkButton><br />
     </form>
 </body>
 </html>
