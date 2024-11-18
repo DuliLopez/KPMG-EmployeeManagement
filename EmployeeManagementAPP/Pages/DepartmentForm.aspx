@@ -86,59 +86,59 @@
         </div>
         <div class="content">
             <center>
-        <div style="border-style: solid; border-color: inherit; border-width: medium; background-color: #E6EEF3; border-radius: 5px" class="auto-style1">
-            <b>
-                <h1>
-                    <center>Department Form</center>
-                </h1>
-                <br />
-                <div class="auto-style4">
-                    Department ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-:
-                    <asp:TextBox ID="txtDepId" placeholder="Enter Department ID" runat="server" TextMode="Number" Style="font-size: 20px; width: 417px" CssClass="auto-style3"></asp:TextBox><br />
-                    <asp:RequiredFieldValidator 
-                        ID="rfvDepId" 
-                        runat="server" 
-                        ControlToValidate="txtDepId" 
-                        ErrorMessage="Please enter Department ID." 
-                        ForeColor="Red" 
-                        Display="Dynamic"
-                        ValidationGroup="DepartmentForm" />
-                    <br />
-                    Department Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-:
-                    <asp:TextBox ID="txtDepName" placeholder="Enter the Department Name" runat="server" Style="font-size: 20px; width: 417px" CssClass="auto-style2"></asp:TextBox><br />
-                    <asp:RequiredFieldValidator 
-                        ID="rfvDepName" 
-                        runat="server" 
-                        ControlToValidate="txtDepName" 
-                        ErrorMessage="Please enter Department Name." 
-                        ForeColor="Red" 
-                        Display="Dynamic"
-                        ValidationGroup="DepartmentForm" />
-                    <br />
-                    Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-:
-                    <asp:TextBox ID="txtLocation" placeholder="Enter the Location" runat="server" Style="font-size: 20px; width: 417px"></asp:TextBox><br />
-                    <asp:RequiredFieldValidator 
-                        ID="rfvLocation" 
-                        runat="server" 
-                        ControlToValidate="txtLocation" 
-                        ErrorMessage="Please enter Location." 
-                        ForeColor="Red" 
-                        Display="Dynamic"
-                        ValidationGroup="DepartmentForm" />
-                    <br />
+                <div style="border-style: solid; border-color: inherit; border-width: medium; background-color: #E6EEF3; border-radius: 5px" class="auto-style1">
+                    <b>
+                        <h1>
+                            <center>Department Form</center>
+                        </h1>
+                        <br />
+                        <div class="auto-style4">
+                        Department ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-:
+                        <asp:TextBox ID="txtDepId" placeholder="Enter Department ID" runat="server" TextMode="Number" Style="font-size: 20px; width: 417px" CssClass="auto-style3"></asp:TextBox><br />
+                        <asp:RequiredFieldValidator 
+                            ID="rfvDepId" 
+                            runat="server" 
+                            ControlToValidate="txtDepId" 
+                            ErrorMessage="Please enter Department ID." 
+                            ForeColor="Red" 
+                            Display="Dynamic"
+                            ValidationGroup="DepartmentForm" />
+                        <br />
+                        Department Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-:
+                        <asp:TextBox ID="txtDepName" placeholder="Enter the Department Name" runat="server" Style="font-size: 20px; width: 417px" CssClass="auto-style2"></asp:TextBox><br />
+                        <asp:RequiredFieldValidator 
+                            ID="rfvDepName" 
+                            runat="server" 
+                            ControlToValidate="txtDepName" 
+                            ErrorMessage="Please enter Department Name." 
+                            ForeColor="Red" 
+                            Display="Dynamic"
+                            ValidationGroup="DepartmentForm" />
+                        <br />
+                        Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-:
+                        <asp:TextBox ID="txtLocation" placeholder="Enter the Location" runat="server" Style="font-size: 20px; width: 417px"></asp:TextBox><br />
+                        <asp:RequiredFieldValidator 
+                            ID="rfvLocation" 
+                            runat="server" 
+                            ControlToValidate="txtLocation" 
+                            ErrorMessage="Please enter Location." 
+                            ForeColor="Red" 
+                            Display="Dynamic"
+                            ValidationGroup="DepartmentForm" />
+                        <br />
 
-                    <asp:Button Text="ADD" ValidationGroup="DepartmentForm" Style="margin-left: 50px; font-size: 15px; height: 35px; width: 100px; border-radius: 5px; background-color: black; color: white" runat="server" OnClick="btnAdd_Click" ID="btnAdd" />
-                    <asp:Button Text="UPDATE" ValidationGroup="DepartmentForm" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnUpdate" OnClick="btnUpdate_Click" />
-                    <asp:Button Text="DELETE" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnDelete" OnClick="btnDelete_Click" />
-                    <asp:Button Text="CLEAR" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnCLear" OnClick="btnClear_Click" /><br />
-                    <br />
-                    <br />
+                        <asp:Button Text="ADD" ValidationGroup="DepartmentForm" Style="margin-left: 50px; font-size: 15px; height: 35px; width: 100px; border-radius: 5px; background-color: black; color: white" runat="server" OnClick="btnAdd_Click" ID="btnAdd" />
+                        <asp:Button Text="UPDATE" ValidationGroup="DepartmentForm" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnUpdate" OnClick="btnUpdate_Click" />
+                        <asp:Button Text="DELETE" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnDelete" OnClick="btnDelete_Click" />
+                        <asp:Button Text="CLEAR" runat="server" Style="margin-left: 50px; font-size: 15px; border-radius: 5px; height: 35px; width: 100px; background-color: black; color: white" ID="btnCLear" OnClick="btnClear_Click" /><br />
+                        <br />
+                        <br />
+                    </div>
+                    </b>
                 </div>
-            </b>
-        </div>
-        <br />
-        <br />
-        <div>
+                <br />
+                <br />
+                <div>
             <asp:GridView ID="gvDepDetails" AutoGenerateColumns="false" OnRowCommand="gvDepDetails_RowCommand" CssClass="table table-bordered table-hover" Height="184px" Width="100%" runat="server">
                 <Columns>
                     <asp:TemplateField HeaderText="Department ID" HeaderStyle-BackColor="#AAB3BA" HeaderStyle-Font-Bold="true">
@@ -174,6 +174,7 @@
         </div>
             </center>
             <asp:LinkButton ID="LinkButtonDashboard" runat="server" OnClick="LinkButtonDashboard_Click">Back to DashBoard</asp:LinkButton><br />
+        </div>
     </form>
 </body>
 </html>
